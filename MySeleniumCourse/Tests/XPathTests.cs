@@ -27,5 +27,17 @@ namespace MySeleniumCourse.Tests
             paymentOperations.SelectCheckoutButton(webDriver);
             paymentOperations.FindFirstProductNameOnCheckout(webDriver);
         }
+
+        [Test]
+        public void TestOfXPathRelations()
+        {
+            webDriver.Navigate().GoToUrl("https://fakestore.testelka.pl");
+            dismissingBottomBar.CloseBottomBar(webDriver);
+            addingItemsToCart.AddToCartSotaventaLimnos(webDriver);
+            Thread.Sleep(2000);
+            cartOperations.SelectCartIcon(webDriver);
+            cartOperations.FindPriceOfFuerteventura(webDriver);
+            cartOperations.FindTotalPriceOfCart(webDriver);
+        }
     }
 }
