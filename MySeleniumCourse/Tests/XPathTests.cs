@@ -34,7 +34,7 @@ namespace MySeleniumCourse.Tests
             webDriver.Navigate().GoToUrl("https://fakestore.testelka.pl");
             dismissingBottomBar.CloseBottomBar(webDriver);
             addingItemsToCart.AddToCartSotaventaLimnos(webDriver);
-            Thread.Sleep(2000);
+            addingItemsToCart.WaitToShowCartButtonUnderLimnosIsShown(webDriver);
             cartOperations.SelectCartIcon(webDriver);
             cartOperations.FindPriceOfFuerteventura(webDriver);
             cartOperations.FindTotalPriceOfCart(webDriver);

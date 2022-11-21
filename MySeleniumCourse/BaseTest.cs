@@ -12,6 +12,7 @@ namespace MySeleniumCourse
         public void LaunchDriver()
         {
             webDriver = new ChromeDriver();
+            webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
         }
 
         [TearDown]
